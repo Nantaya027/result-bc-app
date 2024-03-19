@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.9.10 on darwin)" generated="2024-03-19T12:37:42.171224" rpa="false" schemaversion="5">
+<suite id="s1" name="01-Notlogin" source="/Users/kawinpop/workspace/bc-app/01-notlogin.robot">
+<test id="s1-t1" name="Open Android app" line="17">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME_ANDROID}</arg>
+<arg>deviceName=${DEVICE_NAME_ANDROID}</arg>
+<arg>appPackage=${appPackage}</arg>
+<arg>newCommandTimeout=${newCommandTimeout}</arg>
+<arg>appActivity=${appActivity}</arg>
+<arg>noReset=${noReset}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" start="2024-03-19T12:37:42.386784" elapsed="6.505422"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T12:37:51.893122" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T12:37:48.892708" elapsed="3.000556"/>
+</kw>
+<status status="PASS" start="2024-03-19T12:37:42.385927" elapsed="9.507655"/>
+</test>
+<test id="s1-t2" name="01-NotLoing" line="22">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>xpath=//android.view.View[@content-desc="Not now"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-03-19T12:37:51.894351" elapsed="1.445208"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-03-19T12:37:53.341170" level="INFO">Clicking element 'xpath=//android.view.View[@content-desc="Not now"]'.</msg>
+<arg>xpath=//android.view.View[@content-desc="Not now"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-03-19T12:37:53.339797" elapsed="0.087742"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-19T12:37:56.428278" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-19T12:37:53.427912" elapsed="3.000485"/>
+</kw>
+<kw name="Click Element At Coordinates" owner="AppiumLibrary">
+<msg time="2024-03-19T12:37:56.430240" level="INFO">Pressing at (973, 2234).</msg>
+<arg>973</arg>
+<arg>2234</arg>
+<doc>click element at a certain coordinate</doc>
+<status status="PASS" start="2024-03-19T12:37:56.428655" elapsed="0.704085"/>
+</kw>
+<status status="PASS" start="2024-03-19T12:37:51.893848" elapsed="5.239192"/>
+</test>
+<status status="PASS" start="2024-03-19T12:37:42.172591" elapsed="14.961106"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="01-Notlogin">01-Notlogin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
